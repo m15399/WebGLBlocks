@@ -1,0 +1,62 @@
+<html>
+
+<style type="text/css">
+	
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+}
+
+</style>
+
+<body>
+
+<center>
+<canvas></canvas>
+</center>
+
+<script id="shader-vert" type="notjs">
+
+attribute vec4 a_position;
+attribute vec4 a_color;
+
+uniform mat4 mvp;
+uniform vec4 colorTint;
+
+varying vec4 color;
+
+void main(){
+	gl_Position = mvp * a_position;
+	color = a_color * colorTint;
+}
+
+</script>
+
+<script id="shader-frag" type="notjs">
+
+precision mediump float;
+
+varying vec4 color;
+
+void main(){
+	gl_FragColor = color;
+}
+
+</script>
+<script src="gl-matrix-min.js"></script>
+
+<script>"use strict";</script>
+
+<script src="Globals.js"></script>
+<script src="Utils.js"></script>
+<script src="Transform.js"></script>
+<script src="Canvas.js"></script>
+<script src="Shader.js"></script>
+<script src="Mesh.js"></script>
+<script src="Primitives.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
