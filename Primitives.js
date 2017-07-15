@@ -31,9 +31,9 @@ function CreateCubeMesh(gl, topColor, botColor){
 		]);
 	var add = 1.09;
 	cube.SetColors(Globals.gl, [
-		topColor[0], topColor[1], topColor[2], topColor[3],
-		topColor[0], topColor[1], topColor[2], topColor[3],
 		topColor[0] * add, topColor[1] * add, topColor[2] * add, topColor[3],
+		topColor[0], topColor[1], topColor[2], topColor[3],
+		topColor[0], topColor[1], topColor[2], topColor[3],
 		topColor[0] * add, topColor[1] * add, topColor[2] * add, topColor[3],
 		botColor[0], botColor[1], botColor[2], botColor[3],
 		botColor[0], botColor[1], botColor[2], botColor[3],
